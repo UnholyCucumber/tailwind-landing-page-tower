@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "./ui/button"
-import { Input } from "./utils/input"
+import { Input } from "./ui/input"
 
 // import Cal, { getCalApi } from "@calcom/embed-react"
 // export default function MyApp() {
