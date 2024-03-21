@@ -33,7 +33,7 @@ export default function Hero() {
     setMessage("")
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_AUTH_URL}/api/fe/v3/add_waitlist_user`,
+        `/waitlist`,
         {
           method: "POST",
           headers: {
