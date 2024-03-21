@@ -1,4 +1,69 @@
+"use client"
+
+import { useState } from "react"
+import { Button } from "./ui/button"
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog"
+import { Input } from "./ui/input"
+import { Label } from "./ui/label"
+
+interface FormData {
+  email: string
+  first_name: string
+}
+
 export default function Hero() {
+  const [formData, setFormData] = useState<FormData>({
+    email: "",
+    first_name: "",
+  })
+  const [message, setMessage] = useState<string>("")
+  const [errorMessage, setErrorMessage] = useState<string>("")
+  const [open, setOpen] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setMessage("")
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_AUTH_URL}/api/fe/v3/add_waitlist_user`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-Token": "-.-",
+          },
+          body: JSON.stringify({
+            email: formData.email, // required
+            first_name: formData.first_name, // optional
+            // last_name, // optional
+            // username, // optional
+          }),
+        }
+      )
+
+      if (response.ok) {
+        setOpen(false)
+        setFormData({ first_name: "", email: "" }) // Clear the form
+        setMessage("Thanks for signing up; we will be in touch shortly.")
+        setErrorMessage("")
+      } else {
+        setErrorMessage(
+          "An error occurred. Please check your inputs and try again."
+        )
+      }
+    } catch (error) {
+      setMessage("Network error. Please try again.")
+    }
+  }
+
   return (
     <section className="relative">
       {/* Illustration behind hero content */}
@@ -41,34 +106,98 @@ export default function Hero() {
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
-              Build notifications in{" "}
+              Get legal context in{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r to-[#3c0af5] from-[#009aff]">
-                minutes.
+                seconds.
               </span>
             </h1>
+            <br />
+            <br />
             <div className="max-w-3xl mx-auto">
               <p
                 className="text-xl text-gray-600 mb-8"
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Connect your DB or event bus and effortlessly ship transactional
-                notifications - from trigger to delivery - in minutes, not
-                hours. No coding necessary.
+                Retrieve relevant statutes and case law directly in Microsoft
+                Word through natural language search. No more complex Boolean
+                logic and keyword matching.
               </p>
+              <br />
+              <br />
               <div
                 className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center"
                 data-aos="zoom-y-out"
                 data-aos-delay="300"
               >
                 <div>
-                  <a
-                    className="btn text-white bg-[#3c0af5] hover:bg-[#009aff] w-full mb-4 sm:w-auto sm:mb-0"
-                    href="#book-demo"
-                  >
-                    Book Demo Now
-                  </a>
+                  <Dialog open={open} onOpenChange={setOpen}>
+                    <DialogTrigger>
+                      <a
+                        className="btn text-white bg-[#3c0af5] hover:bg-[#009aff] w-full mb-4 sm:w-auto sm:mb-0"
+                        // href="#book-demo"
+                      >
+                        Join the Waitlist
+                      </a>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Join the Waitlist</DialogTitle>
+                        <DialogDescription>
+                          By submitting this form, you will join the waitlist to
+                          get early access to Tower. We will reach out to
+                          schedule a demo once you're selected.
+                        </DialogDescription>
+                        <br />
+
+                        <form
+                          className="flex flex-col justify-center items-center"
+                          onSubmit={handleSubmit}
+                        >
+                          <div className="flex flex-row items-center gap-4">
+                            <Label htmlFor="first_name" className="text-right">
+                              First Name
+                            </Label>
+                            <Input
+                              id="first_name"
+                              placeholder="Name"
+                              className="w-full"
+                              value={formData.first_name}
+                              onChange={(e) =>
+                                setFormData((prevState) => ({
+                                  ...prevState,
+                                  first_name: e.target.value,
+                                }))
+                              }
+                            />
+                          </div>
+                          <br />
+                          <div className="flex flex-row items-center gap-4">
+                            <Label htmlFor="email" className="text-right">
+                              Work Email
+                            </Label>
+                            <Input
+                              id="email"
+                              placeholder="Email"
+                              className="w-full"
+                              value={formData.email}
+                              onChange={(e) =>
+                                setFormData((prevState) => ({
+                                  ...prevState,
+                                  email: e.target.value,
+                                }))
+                              }
+                            />
+                          </div>
+                          <br />
+                          <Button> Join Waitlist </Button>
+                          {errorMessage}
+                        </form>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
                 </div>
+
                 {/* <div>
                   <a
                     className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
@@ -79,6 +208,8 @@ export default function Hero() {
                 </div> */}
               </div>
             </div>
+            <br />
+            <p>{message}</p>
           </div>
 
           {/* Hero image */}
@@ -112,13 +243,13 @@ export default function Hero() {
               ></iframe>
             </div>
           </div> */}
-          <iframe
+          {/* <iframe
             width="1080"
             height="701"
             src="https://www.loom.com/embed/41ec5f06d3f1436eaf02cd705044b46b?hideEmbedTopBar=true."
             frameBorder="0"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
         </div>
       </div>
     </section>

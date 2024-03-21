@@ -47,7 +47,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   href="#book-demo"
                   className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
                 >
@@ -62,7 +62,7 @@ export default function Header() {
                       fillRule="nonzero"
                     />
                   </svg>
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </nav>
