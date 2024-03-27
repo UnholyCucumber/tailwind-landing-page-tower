@@ -116,7 +116,7 @@ export default function Hero() {
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Tower helps in-house counsels triarge and manage incoming legal
+                Tower helps in-house counsels triage and manage incoming legal
                 requests using AI. Automatically populate cases with context
                 whenever someone messages via Slack, Teams, or email. Track case
                 progress through a single dashboard and gain insights on KPIs.
