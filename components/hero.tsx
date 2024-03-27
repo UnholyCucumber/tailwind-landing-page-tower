@@ -32,22 +32,19 @@ export default function Hero() {
     e.preventDefault()
     setMessage("")
     try {
-      const response = await fetch(
-        `/waitlist`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-CSRF-Token": "-.-",
-          },
-          body: JSON.stringify({
-            email: formData.email, // required
-            first_name: formData.first_name, // optional
-            // last_name, // optional
-            // username, // optional
-          }),
-        }
-      )
+      const response = await fetch(`/waitlist`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": "-.-",
+        },
+        body: JSON.stringify({
+          email: formData.email, // required
+          first_name: formData.first_name, // optional
+          // last_name, // optional
+          // username, // optional
+        }),
+      })
 
       if (response.ok) {
         setOpen(false)
@@ -106,9 +103,9 @@ export default function Hero() {
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
-              Get legal context in{" "}
+              Track your legal requests in{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r to-[#3c0af5] from-[#009aff]">
-                seconds.
+                one place.
               </span>
             </h1>
             <br />
@@ -119,9 +116,10 @@ export default function Hero() {
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Retrieve relevant statutes and case law directly in Microsoft
-                Word through natural language search. No more complex Boolean
-                logic and keyword matching.
+                Tower helps in-house counsels triarge and manage incoming legal
+                requests using AI. Automatically populate cases with context
+                whenever someone messages via Slack, Teams, or email. Track case
+                progress through a single dashboard and gain insights on KPIs.
               </p>
               <br />
               <br />
