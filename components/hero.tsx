@@ -230,8 +230,8 @@ export default function Hero() {
               allowFullScreen
               className="absolute top-0 left-0 w-[1080px] h-[1080px]]"
             ></iframe>
-          </div> */}
-          {/* <div className="w-full max-w-screen-lg mx-auto">
+          </div>
+          <div className="w-full max-w-screen-lg mx-auto">
             <div className="aspect-w-full aspect-h-full">
               <iframe
                 className="w-full h-full"
@@ -241,13 +241,13 @@ export default function Hero() {
               ></iframe>
             </div>
           </div> */}
-          {/* <iframe
+          <iframe
             width="1080"
             height="701"
-            src="https://www.loom.com/embed/41ec5f06d3f1436eaf02cd705044b46b?hideEmbedTopBar=true."
+            src="https://www.loom.com/embed/7f199d62c3fa45948305f96d258d9792?hideEmbedTopBar=true."
             frameBorder="0"
             allowFullScreen
-          ></iframe> */}
+          ></iframe>
         </div>
       </div>
     </section>

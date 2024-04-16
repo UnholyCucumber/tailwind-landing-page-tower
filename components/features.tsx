@@ -31,7 +31,7 @@ export default function Features() {
         <div className="pt-12 md:pt-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2">Ultimate Notifications Platform</h1>
+            <h1 className="h2">Ultimate In-House Legal Platform</h1>
             {/* <p className="text-xl text-gray-600">
               Tower streamlines your workflow by enabling you to create and
               manage all your notifications from a single, unified platform.
@@ -128,12 +128,10 @@ export default function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
-                      Manage All Your Notifications
+                      Manage All Your Tickets
                     </div>
                     <div className="text-gray-600">
-                      Easily monitor all your notifications, even those from
-                      external platforms like Salesforce. Easily toggle your
-                      notifications streams on and off.
+                      Automatically intake and manage all your tickets.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
