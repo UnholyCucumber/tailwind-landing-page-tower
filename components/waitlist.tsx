@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
+import WaitlistButton from "./ui/waitlist-button"
 
 // import Cal, { getCalApi } from "@calcom/embed-react"
 // export default function MyApp() {
@@ -56,11 +55,14 @@ export default function WaitList() {
     //   <Input type="email" placeholder="Email" className="underline" />
     //
     <div className="flex flex-col justify-center items-center">
-      <Input type="first_name" placeholder="First Name" className="w-1/6" />
+      {/* <Input type="first_name" placeholder="First Name" className="w-1/6" />
       <br />
       <Input type="email" placeholder="Email" className="w-1/6" />
       <br />
-      <Button> Join Waitlist </Button>
+      <Button> Join Waitlist </Button> */}
+      <div className="m-10">
+        <WaitlistButton />
+      </div>
     </div>
   )
 }

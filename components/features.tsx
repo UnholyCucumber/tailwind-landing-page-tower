@@ -69,12 +69,12 @@ export default function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
-                      Ship Notifications Fast
+                      Automated Legal Intake
                     </div>
                     <div className="text-gray-600">
-                      Much easier to iterate and experiment with notifications
-                      when they only take minutes to build. No code means
-                      everyone on the team can build them.
+                      Say goodbye to intake forms. Our AI natively connects to
+                      your existing communications channels such as email and
+                      messaging services, responding to requests in real time.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -128,10 +128,12 @@ export default function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
-                      Manage All Your Tickets
+                      Comprehensive Matter Management
                     </div>
                     <div className="text-gray-600">
-                      Automatically intake and manage all your tickets.
+                      Automatically extract relevant info from communications to
+                      generate matter tickets. Manage all your matters in the
+                      same place, including communications and documents.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -213,12 +215,13 @@ export default function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
-                      Flexible Deployment
+                      Flexible Document Management
                     </div>
                     <div className="text-gray-600">
-                      Deployable either on-premises or as SaaS. Seamlessly
-                      connects via your database or event bus, and alternatively
-                      accessible through REST API calls.
+                      Document management that integrates directly with your
+                      current solutions. Automaticly organize and version
+                      control your docs. Search through docs with natural
+                      language.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
@@ -291,17 +294,17 @@ export default function Features() {
                     beforeEnter={() => heightFix()}
                     unmount={false}
                   >
-                    <div className="relative inline-flex flex-col space-y-10">
+                    <div className="relative inline-flex flex-col space-y-2">
                       <h1 className="text-3xl"></h1>
                       <Image
                         className="md:max-w-none mx-auto rounded "
-                        src={"/gifs/create.gif"}
+                        src={"/gifs/email_intake.gif"}
                         width={700}
                         height="462"
                         alt="Features bg"
                       />
                       <h1 className="text-xl">
-                        Intuitive dashboard for creating new notifications
+                        Real time response by AI to queries
                       </h1>
                       {/* <Image
                         className="md:max-w-none mx-auto rounded"
@@ -334,7 +337,7 @@ export default function Features() {
                     beforeEnter={() => heightFix()}
                     unmount={false}
                   >
-                    <div className="relative inline-flex flex-col space-y-10">
+                    <div className="relative inline-flex flex-col space-y-2">
                       <h1 className="text-3xl"></h1>
                       {/* <Image
                         className="md:max-w-none mx-auto rounded"
@@ -353,14 +356,13 @@ export default function Features() {
                       /> */}
                       <Image
                         className="md:max-w-none mx-auto rounded "
-                        src={"/gifs/manage.gif"}
+                        src={"/gifs/tower_dashboard.gif"}
                         width={700}
                         height="462"
                         alt="Features bg"
                       />
                       <h1 className="text-xl">
-                        Minimalist dashboard to give overview of all
-                        notifications
+                        Auto-populate matter for inquiry
                       </h1>
                     </div>
                   </Transition>
@@ -378,7 +380,7 @@ export default function Features() {
                     beforeEnter={() => heightFix()}
                     unmount={false}
                   >
-                    <div className="relative inline-flex flex-col space-y-10">
+                    <div className="relative inline-flex flex-col space-y-2">
                       {/* <Image
                         className="md:max-w-none mx-auto rounded"
                         src={FeaturesBg}
@@ -394,13 +396,21 @@ export default function Features() {
                         alt="Element"
                         style={{ top: "30%" }}
                       /> */}
-                      <Image
+                      {/* <Image
                         className="md:max-w-none mx-auto rounded "
                         src={"/images/data-process-isometric.svg"}
                         width={700}
                         height="462"
                         alt="Features bg"
+                      /> */}
+                      <Image
+                        className="md:max-w-none mx-auto rounded "
+                        src={"/gifs/document_management.gif"}
+                        width={700}
+                        height="462"
+                        alt="Features bg"
                       />
+                      <h1 className="text-xl">Built-in document management</h1>
                     </div>
                   </Transition>
                 </div>

@@ -1,18 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "./ui/button"
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "./ui/dialog"
-import { Input } from "./ui/input"
-import { Label } from "./ui/label"
+import WaitlistButton from "./ui/waitlist-button"
 
 interface FormData {
   email: string
@@ -68,7 +58,7 @@ export default function Hero() {
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
         aria-hidden="true"
       >
-        <svg
+        {/* <svg
           width="1360"
           height="578"
           viewBox="0 0 1360 578"
@@ -91,7 +81,7 @@ export default function Hero() {
             <circle cx="1232" cy="128" r="128" />
             <circle cx="155" cy="443" r="64" />
           </g>
-        </svg>
+        </svg> */}
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -103,23 +93,22 @@ export default function Hero() {
               className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
-              Track your legal requests in{" "}
+              Handle legal requests{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r to-[#3c0af5] from-[#009aff]">
-                one place.
+                automatically.
               </span>
             </h1>
             <br />
             <br />
             <div className="max-w-3xl mx-auto">
               <p
-                className="text-xl text-gray-600 mb-8"
+                className="text-3xl text-gray-600 mb-8"
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >
-                Tower helps in-house counsels triage and manage incoming legal
-                requests using AI. Automatically populate cases with context
-                whenever someone messages via Slack, Teams, or email. Track case
-                progress through a single dashboard and gain insights on KPIs.
+                Tower helps in-house legal counsels sanity check incoming
+                requests, draft first-pass responses, and run playbooks, all in
+                real time and without altering existing workflows.
               </p>
               <br />
               <br />
@@ -128,7 +117,7 @@ export default function Hero() {
                 data-aos="zoom-y-out"
                 data-aos-delay="300"
               >
-                <div>
+                {/* <div>
                   <Dialog open={open} onOpenChange={setOpen}>
                     <DialogTrigger>
                       <a
@@ -194,6 +183,9 @@ export default function Hero() {
                       </DialogHeader>
                     </DialogContent>
                   </Dialog>
+                </div> */}
+                <div>
+                  <WaitlistButton />
                 </div>
 
                 {/* <div>
