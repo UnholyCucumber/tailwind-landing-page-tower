@@ -302,6 +302,7 @@ export default function Features() {
                         width={700}
                         height="462"
                         alt="Features bg"
+                        unoptimized
                       />
                       <h1 className="text-xl">
                         Real time response by AI to queries
@@ -360,6 +361,7 @@ export default function Features() {
                         width={700}
                         height="462"
                         alt="Features bg"
+                        unoptimized
                       />
                       <h1 className="text-xl">
                         Auto-populate matter for inquiry
@@ -409,6 +411,7 @@ export default function Features() {
                         width={700}
                         height="462"
                         alt="Features bg"
+                        unoptimized
                       />
                       <h1 className="text-xl">Built-in document management</h1>
                     </div>

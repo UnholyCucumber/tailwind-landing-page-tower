@@ -1,9 +1,15 @@
 import { useState } from "react"
+import { Button } from "./button"
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
   DialogTrigger,
-} from "../../../vista/src/components/ui/dialog"
+} from "./dialog"
+import { Input } from "./input"
+import { Label } from "./label"
 
 interface FormData {
   email: string
@@ -63,7 +69,61 @@ export default function WaitlistButton() {
             Join the Waitlist
           </a>
         </DialogTrigger>
-        <DialogContent></DialogContent>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Join the Waitlist</DialogTitle>
+            <DialogDescription>
+              By submitting this form, you will join the waitlist to get early
+              access to Tower. We will reach out to schedule a demo once you're
+              selected.
+            </DialogDescription>
+            <br />
+
+            <form
+              className="flex flex-col justify-center items-center"
+              onSubmit={handleSubmit}
+            >
+              <div className="flex flex-row items-center gap-4">
+                <Label htmlFor="first_name" className="text-right">
+                  First Name
+                </Label>
+                <Input
+                  id="first_name"
+                  placeholder="Name"
+                  className="w-full"
+                  value={formData.first_name}
+                  onChange={(e) =>
+                    setFormData((prevState) => ({
+                      ...prevState,
+                      first_name: e.target.value,
+                    }))
+                  }
+                />
+              </div>
+              <br />
+              <div className="flex flex-row items-center gap-4">
+                <Label htmlFor="email" className="text-right">
+                  Work Email
+                </Label>
+                <Input
+                  id="email"
+                  placeholder="Email"
+                  className="w-full"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData((prevState) => ({
+                      ...prevState,
+                      email: e.target.value,
+                    }))
+                  }
+                />
+              </div>
+              <br />
+              <Button> Join Waitlist </Button>
+              {errorMessage}
+            </form>
+          </DialogHeader>
+        </DialogContent>
       </Dialog>
     </div>
   )
