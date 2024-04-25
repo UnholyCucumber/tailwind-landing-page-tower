@@ -1,5 +1,6 @@
 import "./css/style.css"
 
+import { Analytics } from "@vercel/analytics/react"
 import { Inter } from "next/font/google"
 
 import Header from "@/components/ui/header"
@@ -22,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Analytics/>
       <body
         className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}
       >
