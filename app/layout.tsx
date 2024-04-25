@@ -1,9 +1,9 @@
 import "./css/style.css"
 
+import Header from "@/components/ui/header"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Analytics } from "@vercel/analytics/react"
 import { Inter } from "next/font/google"
-
-import Header from "@/components/ui/header"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +23,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Analytics/>
+      <Analytics />
+      <GoogleAnalytics gaId="G-5B3L174MX8" />
       <body
         className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}
       >
