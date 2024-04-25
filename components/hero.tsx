@@ -4,6 +4,8 @@ import { useState } from "react"
 
 import WaitlistButton from "./ui/waitlist-button"
 
+import "./style.css"
+
 interface FormData {
   email: string
   first_name: string
@@ -234,11 +236,14 @@ export default function Hero() {
             </div>
           </div> */}
           <iframe
-            width="1080"
+            id="demoVideo"
+            width={"1080"}
             height="701"
             src="https://www.loom.com/embed/7f199d62c3fa45948305f96d258d9792?hideEmbedTopBar=true."
             frameBorder="0"
             allowFullScreen
+            // className="align-center w-full h-701 md:h-96 lg:h-120 lg:w-4/5 xl:w-3/4"
+            // className="h-700"
           ></iframe>
         </div>
       </div>
