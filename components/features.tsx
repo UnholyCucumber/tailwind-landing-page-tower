@@ -383,6 +383,7 @@ export default function Features() {
                     unmount={false}
                   >
                     <div className="relative inline-flex flex-col space-y-2">
+                      <h1 className="text-3xl"></h1>
                       {/* <Image
                         className="md:max-w-none mx-auto rounded"
                         src={FeaturesBg}
