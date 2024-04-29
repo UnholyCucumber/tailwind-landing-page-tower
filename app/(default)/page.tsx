@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Tower",
   description:
-    "AI assistant for in-house legal; automated matter intake, document management, and more.",
+    "AI assistant for in-house legal; automated matter intake, document management, and much more.",
 }
 
 import Features from "@/components/features"
