@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Tower Home Page",
-  description: "Landing page describing what Tower does",
+  title: "Tower",
+  description:
+    "AI assistant for in-house legal; automated matter intake, document management, and more.",
 }
 
 import Features from "@/components/features"
