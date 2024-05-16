@@ -1,21 +1,26 @@
 export const metadata = {
-  title: "Tower Home Page",
-  description: "Landing page describing what Tower does",
+  title: "Tower",
+  description:
+    "AI assistant for in-house legal; automated matter intake, document management, and much more.",
 }
 
-import BookDemo from "@/components/book-demo"
+import ApolloScriptLoader from "@/components/ApolloScriptLoader"
 import Features from "@/components/features"
 import Hero from "@/components/hero"
+import WaitList from "@/components/waitlist"
 
 export default function Home() {
   return (
     <>
+      <ApolloScriptLoader />
+
       <Hero />
       <Features />
       {/* <FeaturesBlocks /> */}
       {/* <Testimonials /> */}
       {/* <Newsletter /> */}
-      <BookDemo />
+      {/* <BookDemo /> */}
+      <WaitList />
     </>
   )
 }
