@@ -219,9 +219,8 @@ export default function Features() {
                     </div>
                     <div className="text-gray-600">
                       Document management that integrates directly with your
-                      current solutions. Automaticly organize and version
-                      control your docs. Search through docs with natural
-                      language.
+                      current solutions. Automatically organize and version your
+                      docs. Search through everything with natural language.
                     </div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
